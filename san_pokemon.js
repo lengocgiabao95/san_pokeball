@@ -4,8 +4,8 @@
     var ctx = c.getContext("2d");
     var w = document.getElementById('canvas').offsetWidth;
     var h = document.getElementById('canvas').offsetWidth;
-    var objectSizes = 20;
-    var modifier = 10;
+    
+    
     
     
    
@@ -42,8 +42,8 @@
     // game objects 
     var player = {
         speed : 100,
-        x : w/2,
-        y : h/2,
+        x : w / 2,
+        y : h / 2,
         
            
 
@@ -129,12 +129,49 @@
 
     };
     // check collision 
+    // function check_collision(x, y) {
+    //     var foundCollision = false;
+    
+    //     if ((x > 80 && x < 189 && (y == 60 || y == 160 ) || (y > 60 && y < 160 && (x == 80 || x == 189)))) {
+    //       // house
+    //       alert('house')
+    //       foundCollision = true;
+    //     }
+    
+    //     if (
+    //       x < 20||
+    //       x > 400 ||
+    //       y < 20||
+    //       y > 400 ||
+    //       (y > 0 && y < 80 && (x == 400 || x == 380)) || //right corner
+    //       (y > 0 && y < 80 && (x == 40 || x == 60)) || //left corner
+    //       (y > 360 && (x == 40 || x == 60)) || //left corner
+    //       (x > 340 && (y == 380 || y == 400)) || //left corner
+    //       (x > 380 && (y == 340 || y == 360)) //left corner 2
+    //     ) {
+          
+    //       foundCollision = true;
+    //     }
+    
+    //     return foundCollision;
+    //   }
+    //   check_collision(player.x,player.y);
+      
    
     
-     
+     //game loop
    
     var main = function () {
-        var now = Date.now();
+        var now = Date.now();/**********double lastTime = getCurrentTime();
+        while (true)
+        {
+          double current = getCurrentTime();
+          double elapsed = current - lastTime;
+          processInput();
+          update(elapsed);
+          render();
+          lastTime = current;
+        } */
         var delta = now - then;
     
         update(delta / 1000);
